@@ -1,0 +1,8 @@
+<%= Time.now.strftime("%A, %B %d, %Y %l:%M %p") %> <br>
+
+<%= form_tag(answer_path, method: :post, 'data-turbo': false) do %>
+  <%= text_field_tag :answer, nil, placeholder: "Provide an answer" %>
+  <%= submit_tag "Answer!" %>
+<% end %>
+
+<%= link_to "Ask a new question", ask_path %>
